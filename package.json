@@ -1,0 +1,33 @@
+{
+  "name": "embedkit",
+  "version": "0.1.0",
+  "description": "A configurable toolkit for using embeddings well.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "examples"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "npm run build && node --experimental-specifier-resolution=node --test test/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "embeddings",
+    "vector-search",
+    "semantic-search",
+    "typescript",
+    "browser"
+  ]
+}
